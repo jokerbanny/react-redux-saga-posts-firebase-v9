@@ -31,7 +31,7 @@ function* onCreatePost() {
   yield takeEvery(Types.CREATE_POST_START, onCreatePostStartAsync)
 }
 
-// START DELETE USER
+// START DELETE POST
 function* onDeletePost() {
   while (true) {
     const { payload: postId } = yield take(Types.DELETE_POST_START)
