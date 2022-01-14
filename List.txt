@@ -1,0 +1,15 @@
+- npm i redux redux-saga react-redux redux-devtools-extension react-router-dom axios json-server
+- pagekage.json "server": "json-server --watch db.json --port 5000"
+- cleanup code
+- create data db.json
+- create Route
+- create Navbar
+- create Posts
+- create PostItem
+- create actionTypes
+- create actionsPost
+- create postReducer
+- create rootReducers
+- create postSaga
+- craete rootSagas
+- create store

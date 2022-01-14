@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "title": "React Redux Saga",
+      "description": "I’ve written a few thousand words on why traditional “semantic class names” are the reason CSS is hard to maintain, but the truth is you’re never going to believe me until you actually try it. If you can suppress the urge to retch long enough to give it a chance, I really think you’ll wonder how you ever worked with CSS any other way.",
+      "name": "demanpro",
+      "email": "demo@gmail.com",
+      "id": "jPPcAQ-ORjLOT7J6ZL0r1"
+    },
+    {
+      "title": "React Hook",
+      "description": "I’ve written a few thousand words on why traditional “semantic class names” are the reason CSS is hard to maintain, but the truth is you’re never going to believe me until you actually try it. If you can suppress the urge to retch long enough to give it a chance, I really think you’ll wonder how you ever worked with CSS any other way.",
+      "name": "Banny Banana",
+      "email": "demo@gmail.com",
+      "id": "jTbhewt-X9U9C9pl0iLv0"
+    },
+    {
+      "title": "Page Nature",
+      "description": "I’ve written a few thousand words on why traditional “semantic class names” are the reason CSS is hard to maintain, but the truth is you’re never going to believe me until you actually try it. If you can suppress the urge to retch long enough to give it a chance, I really think you’ll wonder how you ever worked with CSS any other way.",
+      "name": "kinew",
+      "email": "deman@gmail.com",
+      "id": "Dw5OaiYg8JqAf3hyT2dLh"
+    }
+  ]
+}
