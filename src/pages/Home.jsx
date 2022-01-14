@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 
 function Home() {
   const dispatch = useDispatch()
-  const { posts } = useSelector((state) => state.data)
+  const { posts, loading } = useSelector((state) => state.data)
 
   useEffect(() => {
     dispatch(getPostsStart())
@@ -13,7 +13,7 @@ function Home() {
   }, [])
   return (
     <div>
-      <Posts posts={posts} />
+      <Posts posts={posts} loading={loading} />
     </div>
   )
 }

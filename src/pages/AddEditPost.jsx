@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { nanoid } from 'nanoid'
 
 import { createPostStart, updatePostStart } from '../redux/actions/actionsPost'
 import { useDispatch, useSelector } from 'react-redux'
@@ -37,7 +36,7 @@ function AddEditPost() {
   }
 
   const handleInput = (name) => (e) => {
-    setFormData({ ...formData, id: nanoid(), [name]: e.target.value })
+    setFormData({ ...formData, [name]: e.target.value })
   }
 
   const handleSubmit = (e) => {
@@ -120,7 +119,7 @@ function AddEditPost() {
                 />
               </div>
               <button className='block px-6 py-2 mx-auto text-lg font-semibold text-indigo-100 bg-indigo-600 rounded-md '>
-                ADD POST
+                {!editMode ? 'ADD POST' : 'UPDATE POST'}
               </button>
             </div>
           </div>

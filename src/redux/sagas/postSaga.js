@@ -23,10 +23,8 @@ import {
 // GET POSTS
 export function* onGetPostsStartAsync() {
   try {
-    const response = yield call(getPostsApi)
-    if (response.status === 200) {
-      yield put(getPostsSuccess(response.data))
-    }
+    const data = yield call(getPostsApi)
+    yield put(getPostsSuccess(data))
   } catch (error) {
     yield put(getPostsError(error.data.error))
   }
@@ -36,10 +34,8 @@ export function* onGetPostsStartAsync() {
 export function* onGetPostStartAsync({ payload: postId }) {
   // console.log(postId)
   try {
-    const response = yield call(getPostApi, postId)
-    if (response.status === 200) {
-      yield put(getPostSuccess(response.data))
-    }
+    const data = yield call(getPostApi, postId)
+    yield put(getPostSuccess(data))
   } catch (error) {
     yield put(getPostError(error.data.error))
   }
@@ -50,11 +46,8 @@ export function* onCreatePostStartAsync({ payload }) {
   // console.log(payload)
 
   try {
-    const response = yield call(createPostApi, payload)
-    if (response.status === 200) {
-      delay(500)
-      yield put(createPostSuccess(response.data))
-    }
+    yield call(createPostApi, payload)
+    yield put(createPostSuccess())
   } catch (error) {
     yield put(createPostError(error.data.error))
   }
@@ -63,10 +56,8 @@ export function* onCreatePostStartAsync({ payload }) {
 // UPDATE POST
 export function* onUpdatePostStartAsync({ payload: { id, formData } }) {
   try {
-    const response = yield call(updatePostApi, id, formData)
-    if (response.status === 200) {
-      put(updatePostSuccess())
-    }
+    yield call(updatePostApi, id, formData)
+    put(updatePostSuccess())
   } catch (error) {
     yield put(updatePostError(error.data.error))
   }
@@ -75,10 +66,8 @@ export function* onUpdatePostStartAsync({ payload: { id, formData } }) {
 // DELETE USER
 export function* onDeletePostStartAsync(postId) {
   try {
-    const response = yield call(deletePostApi, postId)
-    if (response.status === 200) {
-      yield put(deletePostSuccess(postId))
-    }
+    yield call(deletePostApi, postId)
+    yield put(deletePostSuccess(postId))
   } catch (error) {
     yield put(deletePostError(error.response.data))
   }
